@@ -7,14 +7,14 @@ import {MatIconModule} from '@angular/material/icon';
 import { CommonModule } from '@angular/common';
 
 @Component({
-  
+  selector:'app-produtos',
   templateUrl: './produtos.component.html',
   styleUrls: ['./produtos.component.scss'],
   standalone: true,
   imports: [MatGridListModule, MatCardModule, MatIconModule, NgFor, NgIf, CommonModule ],
 })
-export class HomeComponent {
-  produtos: any;
+export class produtosComponent {
+
 
   constructor(private router: Router) { }
 
@@ -22,10 +22,7 @@ export class HomeComponent {
     this.router.navigate(['/detalhes', produtosId]);
   }
 
-  toogleFavorito(index: number): void {
-    this.produtos[index].favorito = !this.produtos[index].favorito
-  }
-
+ 
 
   nome: string = 'Sarah';
   sobrenome: string = 'Aquino';
@@ -59,35 +56,8 @@ export class HomeComponent {
       preco: 1500000,
       favorito: false
     },
-    {
-      id: 4,
-      titulo: 'Flat Minimalista',
-      foto: 'https://i.ibb.co/FqSpsYt/flat.jpg',
-      quartos: 1,
-      banheiros: 1,
-      area: 36,
-      preco: 180000,
-      favorito: false
-    },
-    {
-      id: "rg93h8eirbgrebngn",
-      titulo: 'Sala Comercial',
-      foto: 'https://i.ibb.co/2nNsFkt/sala-comercial.jpg',
-      quartos: 0,
-      banheiros: 1,
-      area: 25,
-      preco: 250000,
-      favorito: true
-    },
-    {
-      id: "8493ty34hg489gh",
-      titulo: 'Cobertura Duplex',
-      foto: 'https://i.ibb.co/pPHQfW2/cobertura.jpg',
-      quartos: 3,
-      banheiros: 3,
-      area: 200,
-      preco: 1500000,
-      favorito: true
-    }
+    
+   
+    
   ];
 }

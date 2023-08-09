@@ -5,7 +5,7 @@ import {MatGridListModule} from '@angular/material/grid-list';
 import {MatCardModule} from '@angular/material/card';
 import {MatIconModule} from '@angular/material/icon';
 import { CommonModule } from '@angular/common';
-
+import { Subscription, timer} from 'rxjs';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -18,3 +18,4 @@ export class HomeComponent {
 
   constructor(private router: Router) { }
 }
+

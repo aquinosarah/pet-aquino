@@ -1,14 +1,63 @@
-<div class="carousel slide">
-    <div class="carousel">
-      <div class="carousel-item ">
-        <img src="../../assets/img/cachorro1 png.webp" class="block" alt="cachorro">
-      </div>
-      <div class="carousel-item">
-        <img src="../../assets/img/gato 1 png.jpg" class="block " alt="gato">
-      </div>
-      <div class="carousel-item">
-        <img src="../../assets/img/fofa1.jpeg" class="block " alt="cachorro-gato">
-      </div>
-    </div>
+<div class="container">
+    <h1> Olá {{ nome + " " + sobrenome }}!</h1>
+    <!-- <h2>{{ data | date : 'dd    /MM/YYYY' }}</h2> -->
+    <section id="produto-favoritos">
+        <h2>Confira aqui os produtos favoritos do seu pet:</h2>
+        <mat-grid-list cols="3" rowHeight="3:4">
+            <div *ngFor="let produto of produtos; let i = index">
+                <mat-grid-tile *ngIf="produto.marca >= 'golden' && produtos.favorito">
+                    <mat-card>
+                        <img mat-card-image [src]="produto.foto" [alt]="produto.titulo" />
+                        <mat-card-content>
+                            <h3>{{ produto.titulo }}</h3>
+                            <ul>
+                                <li>racao: {{ produto.racao }}</li>
+                                <li>marca: {{ produto.marca }}</li>
+                                <li>Preço: {{ produto.preco | currency }}</li>
+                            </ul>
+                        </mat-card-content>
+                        <mat-card-actions>
+                            <button
+                                [class]="produto.favorito === false ? 'favorite' : 'favorite-checked'"
+                                [title]="produto.favorito === false ? 'Adicionar aos favoritos' : 'Remover dos favoritos'"
+                                mat-button
+                                (click)="toogleFavorito(i)">
+                            <mat-icon aria-hidden="false" aria-label="Favoritos" fontIcon="favorite"></mat-icon>
+                        </button> 
+                            <button mat-button (click)="verDetalhes(produto.id)">Mais detalhes</button>
+                        </mat-card-actions>
+                    </mat-card>
+                </mat-grid-tile>
+            </div>
+        </mat-grid-list>
+    </section>
+    <section id="lista-produtos">
+        <h2>Todos os produtos:</h2>
+        <mat-grid-list cols="3" rowHeight="3:4">
+            <mat-grid-tile *ngFor="let produto of produtos; let i = index">
+                <mat-card>
+                    <img mat-card-image [src]="produto.foto" [alt]="produto.titulo" />
+                    <mat-card-content>
+                        <h3>{{ produto.titulo }}</h3>
+                        <ul>
+                            <li>osso: {{ produto.osso }}</li>
+                            <li>marca: {{ produto.marca }}</li>
+                            <li>Preço: {{ produto.preco | currency }}</li>
+                        </ul>
+                    </mat-card-content>
+                    <mat-card-actions>
+                        <button
+                            [class]="produto.favorito === false ? 'favorite' : 'favorite-checked'"
+                            [title]="produto.favorito === false ? 'Adicionar aos favoritos' : 'Remover dos favoritos'"
+                            mat-button
+                            (click)="toogleFavorito(i)">
+                            <mat-icon aria-hidden="false" aria-label="Favoritos" fontIcon="favorite"></mat-icon>
+                        </button> 
+                        <button mat-button (click)="verDetalhes(produto.id)">Mais detalhes</button>
+                    </mat-card-actions>
+                </mat-card>
+            </mat-grid-tile>
+        </mat-grid-list>
+    </section>
+</div>
 
-  </div>

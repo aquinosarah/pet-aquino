@@ -19,6 +19,7 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { DetalhesComponent } from './detalhes/detalhes.component';
 import { RodapeComponent } from './rodape/rodape.component';
+import { CarrosselComponent } from './carrossel/carrossel.component';
 
 registerLocaleData(ptBr);
 
@@ -28,7 +29,8 @@ registerLocaleData(ptBr);
     QuemSomosComponent,
     CabecalhoComponent,
     DetalhesComponent,
-    RodapeComponent
+    RodapeComponent,
+    CarrosselComponent
     
   ],
   imports: [
