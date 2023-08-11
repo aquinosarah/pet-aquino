@@ -1,4 +1,4 @@
-import {  DEFAULT_CURRENCY_CODE, LOCALE_ID, NgModule } from '@angular/core';
+import { DEFAULT_CURRENCY_CODE, LOCALE_ID, NgModule } from '@angular/core';
 
 import ptBr from '@angular/common/locales/pt';
 import { registerLocaleData } from '@angular/common';
@@ -8,39 +8,38 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 
-
+//BLOCO DE CÓDIGO
 import { AppComponent } from './app.component';
 import { CabecalhoComponent } from './cabecalho/cabecalho.component';
+import { CarrosselComponent } from './carrossel/carrossel.component';
+import { DetalhesComponent } from './detalhes/detalhes.component';
 import { QuemSomosComponent } from './quem-somos/quem-somos.component';
+import { RodapeComponent } from './rodape/rodape.component';
 
-
+//BLOCOS DE MATERIAL UI
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 import {MatToolbarModule} from '@angular/material/toolbar';
-import { DetalhesComponent } from './detalhes/detalhes.component';
-import { RodapeComponent } from './rodape/rodape.component';
-import { CarrosselComponent } from './carrossel/carrossel.component';
+
 
 registerLocaleData(ptBr);
 
 @NgModule({
   declarations: [
     AppComponent,
-    QuemSomosComponent,
     CabecalhoComponent,
-    DetalhesComponent,
-    RodapeComponent,
-    CarrosselComponent
-    
+    CarrosselComponent,
+    QuemSomosComponent,
+    RodapeComponent
   ],
   imports: [
     BrowserModule,
     ReactiveFormsModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    MatIconModule,
     MatToolbarModule,
     MatButtonModule,
-    MatIconModule,
   ],
   providers: [
     { provide: LOCALE_ID, useValue: 'pt' },

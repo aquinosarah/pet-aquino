@@ -1,0 +1,57 @@
+@import "../app.component.scss";
+
+.contatos {
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    
+    
+    .container{
+        min-height: calc(100vh - 166px);
+    }
+    h1{
+        text-align: center;
+        padding-top: 80px;
+        padding-bottom: 30px;
+        font-size: $extra-grande;
+        color: $cor-secundaria;
+    }
+    form{
+        display: flex;
+        flex-direction: column;
+        gap: rem;
+        width: 500px;
+        margin: 0 auto;
+        border: 3px solid $branco;
+        padding: 50px;
+        border-radius: 100px;
+        margin: 7px;
+        box-shadow: $card-shadow;
+        transition: $card-transition;
+        &:hover {
+            box-shadow: $card-shadow-hover;
+        }
+    }
+    label{
+        font-size: $grande;
+    }
+    input, select, textarea{
+        padding: 10px;
+        width: 100%;
+        border-radius: 10px;
+    }
+    button{
+        padding: 10px;
+        border: none;
+        border-radius: 10px;
+        background-color: #0d169c;
+        font-size: 1.1rem;
+        color: $branco;
+        cursor: pointer;
+        &:hover{
+            background-color: hsl(214, 96%, 74%);
+            transition: 3.5;
+            color: $branco;
+        }
+    }
+}

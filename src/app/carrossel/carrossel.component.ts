@@ -9,13 +9,10 @@ import { Subscription, timer} from 'rxjs';
 export class CarrosselComponent 
   implements OnInit, OnDestroy
   {
-    // Guarda a referência do temporizador.
-    // Assim conseguimos interromper o temporizador
-    // a qualquer momento
+  
     timerSubs!: Subscription;
 
-    // Array com a URL das imagens que serão exibidas
-    // no carrossel
+    
     @Input() imagens: string[] = [
       'https://i.ibb.co/dGZHJSX/1.png',
       'https://i.ibb.co/yhYsysf/2.png',
@@ -23,9 +20,6 @@ export class CarrosselComponent
   
     ];
 
-    // Guarda a posição no array "imagens" que
-    // corresponde a imagem que está sendo exibida
-    // no carrossel
     private _indexImagemAtiva: number = 0;
     get indexImagemAtiva() {
       return this._indexImagemAtiva;

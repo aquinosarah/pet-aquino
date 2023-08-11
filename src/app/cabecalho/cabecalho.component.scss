@@ -1,27 +1,28 @@
-.item {
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 700px;
-    transition: all 0.5s ease-in-out;
-  }
-  
-  .botoes-controle {
-    display: flex;
-    gap: 10px;
-    justify-content: center;
-    margin-top: 8px;
-  }
-  
-  .botoes-controle button {
-    background: #ccc;
-    border: none;
-    border-radius: 50%;
-    cursor: pointer;
-    height: 12px;
-    width: 12px;
-  }
-  
-  .botoes-controle button.ativo {
-    background: #0004ff;
-    cursor: default;
-  }
+@import "../app.component.scss";
+
+    mat-toolbar {
+    background-color: hsl(214, 96%, 74%);;
+    color: $branco;
+
+    .container{
+        width: 1140px;
+       display: flex;
+       margin: auto; //centralizar 
+        h1 {
+            
+            font-size: $grande;
+            color: $branco;
+            padding-top: 20px;
+            cursor: pointer; 
+        }
+        .menu-spacer {
+            flex: 1 1 auto;
+        }
+        nav{
+            margin-right: 200px;
+            margin-top: 10px;
+        }
+        
+        
+        }
+    }
