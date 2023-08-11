@@ -1,2 +1,28 @@
-@import "../app.component.scss";
-
+.item {
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 700px;
+    transition: all 0.5s ease-in-out;
+  }
+  
+  .botoes-controle {
+    display: flex;
+    gap: 6px;
+    justify-content: center;
+    margin-top: 8px;
+  }
+  
+  .botoes-controle button {
+    background: hsl(214, 96%, 74%);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    height: 12px;
+    width: 20px;
+  }
+  
+  .botoes-controle button.ativo {
+    background: #053368;
+    cursor: default;
+  }
+  

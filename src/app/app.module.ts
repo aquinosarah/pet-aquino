@@ -16,6 +16,7 @@ import { DetalhesComponent } from './detalhes/detalhes.component';
 import { QuemSomosComponent } from './quem-somos/quem-somos.component';
 import { RodapeComponent } from './rodape/rodape.component';
 
+
 //BLOCOS DE MATERIAL UI
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
