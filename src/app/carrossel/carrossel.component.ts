@@ -17,9 +17,10 @@ export class CarrosselComponent
     // Array com a URL das imagens que serão exibidas
     // no carrossel
     @Input() imagens: string[] = [
-        'https://i.ibb.co/f0t8B52/1.png',
-        'https://i.ibb.co/cvGh17S/2.png',
-        'https://i.ibb.co/1r4B5rB/3.png'
+      'https://i.ibb.co/dGZHJSX/1.png',
+      'https://i.ibb.co/yhYsysf/2.png',
+      'https://i.ibb.co/jJPsTm8/3.png'
+  
     ];
 
     // Guarda a posição no array "imagens" que
