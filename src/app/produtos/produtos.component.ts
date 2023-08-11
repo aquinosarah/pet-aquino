@@ -13,7 +13,7 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [MatGridListModule, MatCardModule, MatIconModule, NgFor, NgIf, CommonModule ],
 })
-export class HomeComponent {
+export class ProdutosComponent {
 
   constructor(private router: Router) { }
 

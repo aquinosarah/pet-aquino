@@ -17,10 +17,12 @@ import { QuemSomosComponent } from './quem-somos/quem-somos.component';
 import { RodapeComponent } from './rodape/rodape.component';
 
 
+
 //BLOCOS DE MATERIAL UI
 import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 import {MatToolbarModule} from '@angular/material/toolbar';
+import { ProdutosComponent } from './produtos/produtos.component';
 
 
 registerLocaleData(ptBr);
@@ -31,7 +33,8 @@ registerLocaleData(ptBr);
     CabecalhoComponent,
     CarrosselComponent,
     QuemSomosComponent,
-    RodapeComponent
+    RodapeComponent,
+    ProdutosComponent
   ],
   imports: [
     BrowserModule,
