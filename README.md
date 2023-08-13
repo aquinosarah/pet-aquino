@@ -14,8 +14,8 @@ Angular precisa do [Node.js](https://nodejs.org/) v16+ para funcionar.
 
 Clonar o repositório e entrar na pasta do projeto:
 ```sh
-git clone https://github.com/MaylaMotobe/velasMay.git
-cd velasmay
+git clone https://github.com/aquinosarah/pet-aquino.git
+cd pet-aquino
 ```
 
 Instalar o Angular de maneira global em sua máquina:
