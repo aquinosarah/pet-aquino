@@ -14,6 +14,8 @@ import { CabecalhoComponent } from './cabecalho/cabecalho.component';
 import { CarrosselComponent } from './carrossel/carrossel.component';
 import { QuemSomosComponent } from './quem-somos/quem-somos.component';
 import { RodapeComponent } from './rodape/rodape.component';
+import { DetalhesComponent } from './detalhes/detalhes.component';
+
 
 //BLOCOS DE MATERIAL UI
 import {MatIconModule} from '@angular/material/icon';
@@ -31,7 +33,8 @@ registerLocaleData(ptBr);
     CabecalhoComponent,
     CarrosselComponent,
     QuemSomosComponent,
-    RodapeComponent
+    RodapeComponent,
+    DetalhesComponent
     
   ],
   imports: [

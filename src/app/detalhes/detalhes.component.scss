@@ -1,26 +1,28 @@
 @import "../app.component.scss";
 
+.produto {
+    background-color: $preto;
+}
 .container{
     width: 1140px;
     display: block;
     margin: auto;
     padding-top: 30px;
-    min-height: calc(100vh - 234px);// min-height: rodape já fica la em baixo, sem precisar ter o conteúdo no corpo.
+    min-height: calc(100vh - 234px);
     h2{
-        padding: 50px 0px 10px 0px; // top - right - bottom - left
+        padding: 50px 0px 10px 0px;
         font-family: $fonte-secundaria;
-        font-size: 60px;
+        font-size: $extra-grande;
         color: $cor-secundaria;
-        line-height: $extra-grande;
         text-align: center;
         padding-bottom: 30px;
     }
-    .detalhes-produto{
+    .visao-empresa {
         display: flex;
-        gap: 50px;
+        gap: 30px;
         img{
             margin-bottom: 30px;
-            border: 1px solid $branco;
+            border: 1px solid $preto;
             border-radius: 30px;
             box-shadow: $card-shadow;
             transition: $card-transition;
@@ -28,30 +30,35 @@
             box-shadow: $card-shadow-hover;
             } 
         }
-        .nosso{
-            width: 800px;
-            height: 600px;
+        .fred{
+            width: 590px;
+            height: 590px;
+            margin-top: 120px;
         }
         .descricao{
             width: 100%;
             p{
                 padding-left: 25px;
                 text-align: center;
+                color: $branco;
             }
             .compre{
-                font-size: $extra-grande;
+                
+                color: $preto;
                 margin-top: 35px;
+                margin-left: 50px;
                 padding: 20px;
-                border: 1px solid $branco;
-                border-radius: 20px;
+                width: 80%;
+                border: 1px solid $preto;
+                border-radius: 10px;
                 font-weight: bold;
-                background-color: #D9A78B;
+                background-color: $cor-secundaria ;
                 &:hover{
-                    background-color: #F2C6B6 ;
+                    background-color: $branco; 
                 }
             }
             ul{
-                font-family: $fonte-secundaria;
+                font-family: $fonte-principal;
                 color: $branco;
                 font-size: $media;
                 line-height: $grande;
@@ -59,26 +66,17 @@
                 padding-top: 20px;
             }
             li{
-                padding-top: 10px;
+                margin-top: 5px;
+                margin-bottom: 15px;
                 font-family: $fonte-secundaria;
+                font-size: $media;
+                color: $branco;
             }
-            .avaliacao{
+            .imagem2 {
                 border: none;
                 box-shadow: none;
                 margin-left: 180px;
-                width: 30%;
-            }
-            h3, h4{
-                text-align: center;
-            }
-            h4{
-                width: 20%;
-                margin-left: 197px;
-                border: 1px solid $preto;
-                border-radius: 50px;
-                &:hover{
-                    background-color: $cor-principal;
-                }
+                width: 40%;
             }
         }
     }
