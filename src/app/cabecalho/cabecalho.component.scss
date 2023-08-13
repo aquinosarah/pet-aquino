@@ -1,7 +1,7 @@
 @import "../app.component.scss";
 
     mat-toolbar {
-    background-color: hsl(214, 96%, 74%);;
+    background-color: $cor-secundaria;
     color: $branco;
 
     .container{
@@ -28,7 +28,7 @@
     }
  
     .seja{
-       background-color: #004AAD;
+       background-color: #b6d0f2;
     }
     
     
@@ -36,7 +36,7 @@
          
          font-size: $media;
          color: $branco;
-         height: 80px;
+         height: 75px;
          padding-top: 12px;
          cursor: pointer; 
          text-align: center;

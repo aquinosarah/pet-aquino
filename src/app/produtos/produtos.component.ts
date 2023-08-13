@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { NgFor, NgIf } from '@angular/common'
+import { NgFor, NgIf } from '@angular/common';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatCardModule} from '@angular/material/card';
 import {MatIconModule} from '@angular/material/icon';
@@ -11,96 +11,71 @@ import { CommonModule } from '@angular/common';
   templateUrl: './produtos.component.html',
   styleUrls: ['./produtos.component.scss'],
   standalone: true,
-  imports: [MatGridListModule, MatCardModule, MatIconModule, NgFor, NgIf, CommonModule ],
+  imports: [MatGridListModule, MatCardModule, NgFor, NgIf, CommonModule, MatIconModule ]
 })
 export class ProdutosComponent {
-
-  constructor(private router: Router) { }
-
-  verDetalhes(produtoId: string) {
-    this.router.navigate(['/detalhes', produtoId]);
+  imagens: string[] = [];
+  indexImagemAtiva: number = 0;
+  
+  pararTimer() {
+    
+  }
+  ativarImagem(index: number) {
+    
   }
 
-  toogleFavorito(index: number): void {
+  toggleFavorito(index: number): void {
     this.produtos[index].favorito = !this.produtos[index].favorito
   }
+  verDetalhes(id: number) {
+    
+  }
 
 
-  nome: string = 'Pet';
-  sobrenome: string = 'Aquino';
+  texto: string = 'Welcome to the Five Nights at Freddy s!';
   data: any = new Date();
   produtos: Array<any> = [
     {
       id: 1,
-      titulo: 'Ração Golden',
-      foto: 'https://i.ibb.co/WgXN6tG/racao-png.webp',
-      sabor: 'frango',
-      kg: 3,
-      preco: 190,
+      titulo: 'Golden de frango',
+      foto: 'https://i.ibb.co/LZM5thY/filhote-png.png',
+      preco: 200,
       favorito: true
     },
     {
       id: 2,
-      titulo: 'Ração Golden ',
-      foto: 'https://i.ibb.co/sFtR2Hm/racao-carne.webp',
-      sabor: 'carne',
-      kg: 6,
-      preco: 120,
-      favorito: false
+      titulo: 'Golden cookie',
+      foto: 'https://i.ibb.co/Q61xkZt/biscoito-cachorro-png.webp',
+      preco: 150,
+      favorito: true
     },
     {
       id: 3,
-      titulo: 'Ração Golden (filhote)',
-      foto: 'https://i.ibb.co/LZM5thY/filhote-png.png',
-      sabor: 'carne',
-      kg: 6,
-      preco: 100,
-      favorito: false
+      titulo: 'Golden de carne',
+      foto: 'https://i.ibb.co/sFtR2Hm/racao-carne.webp',
+      preco: 140,
+      favorito: true
     },
     {
       id: 4,
-      titulo: 'Ração Golden(gato)',
-      foto: 'https://i.ibb.co/4F4xm6H/gato-png.webp', 
-      sabor: 'carne',
-      kg: 1,
-      preco: 30,
-      favorito: false
+      titulo: 'Golden salmão',
+      foto: 'https://i.ibb.co/4F4xm6H/gato-png.webp',
+      preco: 120,
+      favorito: true
     },
     {
       id: 5,
-      titulo: 'biscoito para gato',
-      foto: 'https://i.ibb.co/d7WmRNN/cookie-gato.png', 
-      sabor: 'carne',
-      kg: 1,
-      preco: 12,
-      favorito: false
+      titulo: 'Premier cookie',
+      foto: 'https://i.ibb.co/d7WmRNN/cookie-gato.png',
+      preco: 250,
+      favorito: true
     },
     {
       id: 6,
-      titulo: 'biscoito para cachorro',
-      foto: 'https://i.ibb.co/tmsG61R/apartamento.jpg',
-      sabor: 'carne',
-      kg: 6,
-      preco: 120,
-      favorito: false
-    },
-    {
-      id: 7,
-      titulo: 'Ração',
-      foto: 'https://i.ibb.co/tmsG61R/apartamento.jpg',
-      sabor: 'carne',
-      kg: 6,
-      preco: 120,
-      favorito: false
-    },
-    {
-      id: 6,
-      titulo: 'Ração',
-      foto: 'https://i.ibb.co/tmsG61R/apartamento.jpg',
-      sabor: 'carne',
-      kg: 6,
-      preco: 120,
-      favorito: false
-    },
+      titulo: 'Premier',
+      foto: 'https://i.ibb.co/9TJv53j/racao-gato.webp',
+      preco: 100,
+      favorito: true
+    }
   ];
 }
