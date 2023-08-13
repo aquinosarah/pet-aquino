@@ -12,9 +12,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CabecalhoComponent } from './cabecalho/cabecalho.component';
 import { CarrosselComponent } from './carrossel/carrossel.component';
+import { DetalhesComponent } from './detalhes/detalhes.component';
 import { QuemSomosComponent } from './quem-somos/quem-somos.component';
 import { RodapeComponent } from './rodape/rodape.component';
-import { DetalhesComponent } from './detalhes/detalhes.component';
 
 
 //BLOCOS DE MATERIAL UI
@@ -32,9 +32,10 @@ registerLocaleData(ptBr);
     AppComponent,
     CabecalhoComponent,
     CarrosselComponent,
+    // DetalhesComponent,
     QuemSomosComponent,
     RodapeComponent,
-    DetalhesComponent
+    
     
   ],
   imports: [

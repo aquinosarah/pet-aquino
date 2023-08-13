@@ -76,6 +76,29 @@ export class ProdutosComponent {
       foto: 'https://i.ibb.co/9TJv53j/racao-gato.webp',
       preco: 100,
       favorito: true
+    },
+    { 
+      id:7,
+      titulo: 'Bolinha',
+      foto:'https://i.ibb.co/zR7PhyX/bolinha2.webp',
+      preco:80,
+      favorito: true
+    },
+    { 
+      id:8,
+      titulo: 'modedor',
+      foto:'https://i.ibb.co/nky5qdm/cachorro3.webp',
+      preco:90,
+      favorito: true
+    },
+    { 
+      id:8,
+      titulo: 'Brinquedo Interativo ',
+      foto:'https://i.ibb.co/N10PpLt/paragatos.webp',
+      preco:97,
+      favorito: true
     }
+
+
   ];
 }
