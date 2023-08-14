@@ -14,8 +14,7 @@ import { CommonModule } from '@angular/common';
   imports: [MatGridListModule, MatCardModule, NgFor, NgIf, CommonModule, MatIconModule ]
 })
 export class ProdutosComponent {
-  imagens: string[] = [];
-  indexImagemAtiva: number = 0;
+ constructor(private rouder: Router) {}
   
   pararTimer() {
     
@@ -27,10 +26,10 @@ export class ProdutosComponent {
   toggleFavorito(index: number): void {
     this.produtos[index].favorito = !this.produtos[index].favorito
   }
-  verDetalhes(id: number) {
-    
-  }
-
+ 
+  verDetalhes(produtoId: string) {
+    this.rouder.navigate(['/detalhes', produtoId]);
+}
 
   texto: string = 'Welcome to the Five Nights at Freddy s!';
   data: any = new Date();

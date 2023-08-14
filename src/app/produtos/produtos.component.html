@@ -1,6 +1,3 @@
-<div class="botoes-controle">
-  <button *ngFor="let imagem of imagens; index as i"[class.ativo]="i === indexImagemAtiva"(click)="pararTimer(); ativarImagem(i)"></button></div>
-<img *ngFor="let imagem of imagens" [src]="imagem" width="1" height="1" style="opacity: 0; position: fixed"/>
 
 <main>
     <div class="container">
@@ -24,8 +21,7 @@
                     [class]="produto.favorito ? 'favorite-checked' : 'favorite'"
                     [title]="produto.favorito ? 'Remover dos favoritos' : 'Adicionar aos favoritos'"
                     mat-button
-                    (click)="toggleFavorito(i)"
-                  >
+                    (click)="toggleFavorito(i)"     >
                     <mat-icon aria-hidden="false" aria-label="Favoritos" fontIcon="favorite"></mat-icon>
                   </button>
                   <button mat-button (click)="verDetalhes(produto.id)">Mais detalhes</button>
