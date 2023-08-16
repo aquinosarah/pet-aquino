@@ -14,6 +14,7 @@ import { CommonModule } from '@angular/common';
   imports: [MatGridListModule, MatCardModule, NgFor, NgIf, CommonModule, MatIconModule ]
 })
 export class ProdutosComponent {
+  router: any;
  constructor(private rouder: Router) {}
   
   pararTimer() {
@@ -28,10 +29,10 @@ export class ProdutosComponent {
   }
  
   verDetalhes(produtoId: string) {
-    this.rouder.navigate(['/detalhes', produtoId]);
+    this.router.navigate(['/detalhes', produtoId]);
 }
 
-  texto: string = 'Welcome to the Five Nights at Freddy s!';
+  texto: string = 'pet!';
   data: any = new Date();
   produtos: Array<any> = [
     {
